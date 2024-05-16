@@ -1,2 +1,2 @@
-import { appWindow } from '@tauri-apps/api/window';
-await appWindow.setIgnoreCursorEvents(true);
+// import { appWindow } from '@tauri-apps/api/window';
+// // await appWindow.setIgnoreCursorEvents(false);

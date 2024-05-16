@@ -23,7 +23,6 @@
     },
     "windows": [
       {
-        "url": "https://interactive-twitch-chat.frederikheinrich.de/",
         "title": "overlay",
         "x": 0,
         "y": 303,
@@ -31,16 +30,20 @@
         "height": 720,
         "transparent": true,
         "alwaysOnTop": true,
-        "acceptFirstMouse": true
+        "decorations": false
       }
     ],
     "security": {
       "csp": null
     },
     "bundle": {
+      "windows": {
+        "webviewInstallMode": {
+          "type": "downloadBootstrapper"
+        }
+      },
       "active": true,
-      "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "com.tauri.example",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
