@@ -5,15 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tauri App</title>
     <script type="module" src="/src/main.ts" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
     iframe {
       position: fixed;
       inset: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    body {
+      background-color: transparent;
+      width: 100dvh;
+      height: 100dvh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
     }
     </style>
   </head>
 
   <body>
-    <iframe src="https://interactive-twitch-chat.frederikheinrich.de/"></iframe>
+    <div id="prompt">
+    <form method="get">
+      <p>Welcome</p>      
+      <input type="text" placeholder="Channel" name="stream" id="stream"><br>
+      <input type="number" min="1" max="2147483646" placeholder="max messages" name="maxmessages" id="maxmessages" style="width: auto; text-align: center;"><br>
+      <!--<input type="password" placeholder="Password"><br>-->
+      <input type="submit" value="Start"><br>
+      <!--<a href="#">Forgot Password?</a>-->
+    </form>
+  
+    <div class="drops">
+      <div class="drop drop-1"></div>
+      <div class="drop drop-2"></div>
+      <div class="drop drop-3"></div>
+      <div class="drop drop-4"></div>
+      <div class="drop drop-5"></div>
+    </div>
+  </div>
+  <div id="app"></div>
   </body>
+  <script type="module" src="/src/tmi.min.js"> </script>
+  <script type="module" src="/src/overlay.js" defer></script>
 </html>
